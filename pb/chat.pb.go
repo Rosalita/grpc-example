@@ -20,6 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// protobuf message definition
 type Message struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

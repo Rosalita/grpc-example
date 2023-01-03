@@ -22,6 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ChatServiceClient interface {
+	// a simple rpc where client sends a request and waits for a response
 	SayHello(ctx context.Context, in *Message, opts ...grpc.CallOption) (*Message, error)
 }
 
@@ -46,6 +47,7 @@ func (c *chatServiceClient) SayHello(ctx context.Context, in *Message, opts ...g
 // All implementations must embed UnimplementedChatServiceServer
 // for forward compatibility
 type ChatServiceServer interface {
+	// a simple rpc where client sends a request and waits for a response
 	SayHello(context.Context, *Message) (*Message, error)
 	mustEmbedUnimplementedChatServiceServer()
 }

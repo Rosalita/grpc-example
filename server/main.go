@@ -5,7 +5,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	"github.com/Rosalita/grpc-server/pb"
+	"github.com/Rosalita/grpc-example/pb"
 )
 
 func main(){

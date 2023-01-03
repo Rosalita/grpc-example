@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"golang.org/x/net/context"
-	"github.com/Rosalita/grpc-server/pb"
+	"context"
+	"github.com/Rosalita/grpc-example/pb"
 )
 
 type Server struct {
