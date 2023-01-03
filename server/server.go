@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"context"
-	"github.com/Rosalita/grpc-example/pb"
+	"github.com/Rosalita/grpc-server/pb"
 )
 
 type Server struct {
