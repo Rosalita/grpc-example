@@ -1,12 +1,24 @@
 syntax = "proto3";
 package chat;
 
+// protobuf message definition
 message Message {
   string body = 1;
 }
 
 service ChatService {
+  // a simple rpc where client sends a request and waits for a response
   rpc SayHello(Message) returns (Message) {}
+  // other rpc service methods are:
+
+  // * server side streaming rpc, client sends request and gets a stream to read
+  // rpc HandleMessage(Message) returns (stream Message) {} 
+
+  // * client side streaming rpc, client writes a sequence of messages, server reads them all and responds.option
+  // rpc HandleMessageStream(stream Message) returns (Message) {}
+
+  // * bidirectional streaming rpc where both sides send a sequence of messages using a stream.
+  // rpc HandleMessageStream(stream Message) returns (stream Message) {}
 }
 
 option go_package = "/pb";
